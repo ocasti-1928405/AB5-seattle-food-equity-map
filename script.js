@@ -1,5 +1,5 @@
 // 1. Add your Mapbox Access Token
-mapboxgl.accessToken = 'YOUpk.eyJ1Ijoib2Nhc3RpIiwiYSI6ImNtaGJlcHR0bzBkbHEyam9hZjUxdTN2em8ifQR_MAPBOX_TOKEN_HERE'; 
+mapboxgl.accessToken = 'pk.eyJ1Ijoib2Nhc3RpIiwiYSI6ImNtaGJlcHR0bzBkbHEyam9hZjUxdTN2em8ifQ.1dlbHGkcsfz7UDrymlleLA'; 
 
 // 2. Initialize the Map
 const map = new mapboxgl.Map({
@@ -12,13 +12,13 @@ const map = new mapboxgl.Map({
 
 map.on('load', () => {
 
-    // A. Add the Source (The Data)
+    // A. the Source (The Data)
     map.addSource('grocery-stores', {
         type: 'geojson',
         data: './mock_stores.geojson' // This points to the file  
     });
 
-    // B. Add the Layer (The Visuals)
+    // B. the Layer (The Visuals)
     map.addLayer({
         id: 'store-points',
         type: 'circle',
