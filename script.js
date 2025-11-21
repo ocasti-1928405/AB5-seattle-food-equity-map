@@ -59,7 +59,7 @@ map.on('load', () => {
             }
         }
 
-        // 5. Update the Map Filter
+        // Update the Map Filter
         // This tells Mapbox: "Only show points where Price_Tier is IN this list"
         map.setFilter('store-points', ['in', 'Price_Tier', ...activeFilters]);
         
