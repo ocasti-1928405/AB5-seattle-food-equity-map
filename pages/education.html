@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seattle Food Equity Map | Learn More</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../assets/favicon.png" alt="Logo" class="nav-logo">
+                <span>Seattle Food Equity</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html" class="active">Learn More</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="content-page">
+        <div class="container">
+            <section class="page-header">
+                <h1>Understanding Food Equity</h1>
+                <p class="lead">The intersection of geography, economics, and access to nutritious food</p>
+            </section>
+
+            <section class="content-section">
+                <h2>What Are Food Deserts?</h2>
+                <p>
+                    The term "food desert" describes geographic areas where residents have limited access 
+                    to affordable and nutritious food, particularly fresh fruits and vegetables. The USDA 
+                    defines food deserts using two key metrics:
+                </p>
+                <ul>
+                    <li><strong>Low Income:</strong> Census tracts where the poverty rate is 20% or higher, 
+                    or median family income is at or below 80% of the area median</li>
+                    <li><strong>Low Access:</strong> At least 500 people or 33% of the population live more 
+                    than 1 mile (urban) or 10 miles (rural) from the nearest supermarket</li>
+                </ul>
+                <p>
+                    While this framework has been valuable for identifying underserved areas, it treats all 
+                    supermarkets equally—assuming that proximity to any store solves the access problem. 
+                    Our project challenges this assumption.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>The Problem with Proximity-Only Models</h2>
+                <p>
+                    Standard food desert mapping focuses solely on distance to stores, missing a critical 
+                    dimension: affordability. Consider these scenarios:
+                </p>
+                <div class="example-grid">
+                    <div class="example-card">
+                        <h3>Scenario A</h3>
+                        <p>
+                            A low-income neighborhood has three supermarkets within walking distance, but all 
+                            are premium chains with prices 30-50% higher than budget alternatives. Is this 
+                            true food access?
+                        </p>
+                    </div>
+                    <div class="example-card">
+                        <h3>Scenario B</h3>
+                        <p>
+                            A census tract is classified as "food secure" because it has a Whole Foods nearby, 
+                            yet the median household income is $35,000 and residents rely heavily on emergency 
+                            food services. What does "access" really mean here?
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    These examples illustrate why we need to look beyond proximity and consider economic 
+                    accessibility. A store you cannot afford to shop at is not truly "accessible" food.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Our Price-Adjusted Approach</h2>
+                <p>
+                    To address these limitations, we manually classified Seattle's grocery stores and 
+                    convenience stores into three price tiers:
+                </p>
+                <div class="tier-explanation">
+                    <div class="tier-card budget">
+                        <h3>Budget ($)</h3>
+                        <p><strong>Examples:</strong> WinCo Foods, Food Depot, local ethnic grocery stores, 
+                        discount chains</p>
+                        <p><strong>Characteristics:</strong> Lowest prices, bulk options, limited prepared foods, 
+                        may have fewer "premium" brands but provide essential nutrition at accessible price points</p>
+                    </div>
+                    <div class="tier-card mid-range">
+                        <h3>Mid-Range ($$)</h3>
+                        <p><strong>Examples:</strong> Safeway, Fred Meyer, QFC, regional chains</p>
+                        <p><strong>Characteristics:</strong> Moderate prices, balance of store brands and national 
+                        brands, regular sales, loyalty programs, diverse product selection</p>
+                    </div>
+                    <div class="tier-card premium">
+                        <h3>Premium ($$$)</h3>
+                        <p><strong>Examples:</strong> Whole Foods, PCC Community Markets, Metropolitan Market</p>
+                        <p><strong>Characteristics:</strong> Highest prices, emphasis on organic/specialty items, 
+                        extensive prepared foods, premium brands, specialized dietary options</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Key Findings</h2>
+                <p>
+                    By layering our price-tier classification with income data from the American Community 
+                    Survey, several patterns emerge:
+                </p>
+                <ol>
+                    <li>
+                        <strong>Economic Deserts vs. Geographic Deserts:</strong> Some areas technically have 
+                        food access by proximity measures but lack affordable options relative to local incomes.
+                    </li>
+                    <li>
+                        <strong>Emergency Food Correlation:</strong> Neighborhoods with higher ratios of premium 
+                        to budget stores often show higher density of emergency food providers, suggesting that 
+                        market failure creates dependency on safety-net services.
+                    </li>
+                    <li>
+                        <strong>Transit-Dependent Populations:</strong> For residents without cars, distance to 
+                        affordable options matters even more. A mile walk carrying groceries is very different 
+                        from a mile drive.
+                    </li>
+                    <li>
+                        <strong>Cultural Food Access:</strong> Budget stores often include ethnic grocers that 
+                        provide culturally relevant foods at lower prices—an aspect entirely missing from 
+                        standard food desert metrics.
+                    </li>
+                </ol>
+            </section>
+
+            <section class="content-section">
+                <h2>Data Sources & Methodology</h2>
+                <h3>Datasets Used:</h3>
+                <ul>
+                    <li><strong>USDA Food Access Research Atlas (2019):</strong> Provides Low Income / Low 
+                    Access (LILA) classifications for census tracts</li>
+                    <li><strong>Seattle Active Business License Data:</strong> Filtered by NAICS codes 445110 
+                    (Supermarkets) and 445120 (Convenience Stores)</li>
+                    <li><strong>US Census TIGER/Line Shapefiles (2010):</strong> Geographic boundaries 
+                    matched to USDA methodology</li>
+                    <li><strong>Seattle Neighborhood Boundaries:</strong> For intuitive geographic reference</li>
+                    <li><strong>Seattle Emergency Food Providers:</strong> Locations of food banks and meal programs</li>
+                    <li><strong>American Community Survey 5-Year Estimates:</strong> Income and demographic data</li>
+                </ul>
+                
+                <h3>Classification Methodology:</h3>
+                <p>
+                    Price tier classifications were assigned through systematic research of each chain's 
+                    market positioning, typical product prices compared to Consumer Price Index data, and 
+                    community perception. Independent grocers were evaluated individually based on available 
+                    pricing information and product offerings.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Limitations & Future Work</h2>
+                <p>
+                    While our approach adds important nuance to food access mapping, we acknowledge several 
+                    limitations:
+                </p>
+                <ul>
+                    <li>Price classifications are categorical and don't capture within-store variation or 
+                    temporal price changes</li>
+                    <li>We don't account for store size, product variety, or hours of operation</li>
+                    <li>Transportation barriers beyond distance (e.g., bus routes, travel time) aren't fully 
+                    represented</li>
+                    <li>The analysis is static—food access patterns change over time as stores open or close</li>
+                </ul>
+                <p>
+                    Future iterations could incorporate dynamic pricing data, transit network analysis, 
+                    store quality metrics, and temporal changes to provide an even richer picture of food equity.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Related Resources</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/" 
+                           target="_blank" rel="noopener noreferrer">
+                            USDA Food Access Research Atlas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.seattle.gov/human-services/reports-and-data/food-access" 
+                           target="_blank" rel="noopener noreferrer">
+                            Seattle Office of Planning & Community Development - Food Access Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.feedingamerica.org/research/map-the-meal-gap" 
+                           target="_blank" rel="noopener noreferrer">
+                            Feeding America - Map the Meal Gap
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.census.gov/programs-surveys/acs" 
+                           target="_blank" rel="noopener noreferrer">
+                            American Community Survey (ACS)
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="cta-section">
+                <h2>Apply These Insights</h2>
+                <p>Use the interactive map to explore food equity patterns in Seattle neighborhoods</p>
+                <a href="map.html" class="btn btn-primary">Explore the Map</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Group AB5 | GEOG 328 Final Project</p>
+            <p>University of Washington</p>
+        </div>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

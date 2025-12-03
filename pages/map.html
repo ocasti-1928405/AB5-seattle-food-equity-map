@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seattle Food Equity Map | Interactive Map</title>
+    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/map.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="map-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../assets/favicon.png" alt="Logo" class="nav-logo">
+                <span>Seattle Food Equity</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="map.html" class="active">Interactive Map</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Learn More</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="map-container">
+        <div id="control-panel" class="control-panel">
+            <button class="toggle-panel" id="togglePanel" aria-label="Toggle Controls">
+                <span>‹</span>
+            </button>
+            
+            <div class="panel-content">
+                <h2>Filter Options</h2>
+                
+                <div class="filter-section">
+                    <h3>Price Tier</h3>
+                    <div class="filter-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="Budget" checked>
+                            <span class="color-indicator budget"></span>
+                            Budget ($)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="Mid-Range" checked>
+                            <span class="color-indicator mid-range"></span>
+                            Mid-Range ($$)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="Premium" checked>
+                            <span class="color-indicator premium"></span>
+                            Premium ($$$)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Layers</h3>
+                    <div class="filter-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-emergency" checked>
+                            <span class="layer-icon">⭐</span>
+                            Emergency Food Services
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="show-neighborhoods" checked>
+                            <span class="layer-icon">🗺️</span>
+                            Neighborhood Boundaries
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Find Nearest Stores</h3>
+                    <button class="btn btn-locate" id="locateBtn">
+                        📍 Use My Location
+                    </button>
+                    <div id="location-status" class="location-status"></div>
+                    <div id="nearest-stores" class="nearest-stores"></div>
+                </div>
+
+                <div class="legend">
+                    <h3>Legend</h3>
+                    <div class="legend-item">
+                        <span class="legend-circle budget"></span>
+                        <span>Budget Stores</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-circle mid-range"></span>
+                        <span>Mid-Range Stores</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-circle premium"></span>
+                        <span>Premium Stores</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-star">⭐</span>
+                        <span>Emergency Food</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seattle Food Equity Map | About</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../assets/favicon.png" alt="Logo" class="nav-logo">
+                <span>Seattle Food Equity</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="education.html">Learn More</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="content-page">
+        <div class="container">
+            <section class="page-header">
+                <h1>About This Project</h1>
+                <p class="lead">A critical examination of food access through the lens of affordability</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Project Overview</h2>
+                <p>
+                    The Seattle Food Equity Map is an interactive web application that challenges conventional 
+                    food desert mapping by incorporating economic accessibility alongside geographic proximity. 
+                    While traditional approaches like the USDA Food Access Research Atlas identify areas with 
+                    limited supermarket access, our project reveals a more nuanced reality: many neighborhoods 
+                    have stores nearby, but lack access to affordable options.
+                </p>
+                <p>
+                    By classifying grocery stores into three price tiers—Budget ($), Mid-Range ($$), and 
+                    Premium ($$$)—we provide policymakers, community organizations, and residents with 
+                    actionable insights about where affordable food options are truly lacking.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2>Our Approach</h2>
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <h3>1. Data Collection</h3>
+                        <p>
+                            We compiled data from multiple authoritative sources: the USDA Food Access Research 
+                            Atlas (2019), Seattle Active Business License database, US Census TIGER/Line shapefiles, 
+                            and Seattle's emergency food provider listings.
+                        </p>
+                    </div>
+                    <div class="approach-item">
+                        <h3>2. Manual Classification</h3>
+                        <p>
+                            Each grocery store and convenience store was manually classified into price tiers 
+                            based on market positioning, typical product prices, and brand recognition. This 
+                            crucial step adds the "economic access" layer missing from standard food desert maps.
+                        </p>
+                    </div>
+                    <div class="approach-item">
+                        <h3>3. Interactive Visualization</h3>
+                        <p>
+                            Built with Mapbox GL JS, our map allows users to filter stores by price tier, 
+                            view emergency food services, calculate distances from their location, and explore 
+                            neighborhood-level food access patterns.
+                        </p>
+                    </div>
+                    <div class="approach-item">
+                        <h3>4. Critical Analysis</h3>
+                        <p>
+                            By overlaying income data from the American Community Survey with our price-adjusted 
+                            food access layer, we reveal disparities that standard proximity-only models miss.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Target Audience</h2>
+                <div class="audience-list">
+                    <div class="audience-item">
+                        <h3>🏛️ Policymakers</h3>
+                        <p>
+                            City planners and policymakers can use this map to identify where incentives for 
+                            affordable grocers are most needed and where existing "food desert" designations 
+                            may mask affordability issues.
+                        </p>
+                    </div>
+                    <div class="audience-item">
+                        <h3>🤝 Community Organizations</h3>
+                        <p>
+                            Food banks and community groups can identify neighborhoods where residents have 
+                            physical store access but lack economic access, enabling more strategic resource 
+                            allocation.
+                        </p>
+                    </div>
+                    <div class="audience-item">
+                        <h3>🏘️ Residents</h3>
+                        <p>
+                            Seattle residents can explore food access in their neighborhood, find affordable 
+                            options nearby, and understand the broader patterns of food equity across the city.
+                        </p>
+                    </div>
+                    <div class="audience-item">
+                        <h3>📚 Researchers</h3>
+                        <p>
+                            Students and researchers studying urban geography, food justice, and spatial 
+                            inequality can use this project as a model for more nuanced food access analysis.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>The Team</h2>
+                <p>
+                    This project was created by Group AB5 as a final project for GEOG 328 at the 
+                    University of Washington. Our interdisciplinary team brought together skills in 
+                    geographic information systems, web development, data analysis, and urban studies.
+                </p>
+                <div class="team-members">
+                    <p><strong>Team Members:</strong></p>
+                    <ul>
+                        <li>Oscar Castillo</li>
+                        <li>Chae Won Yoo</li>
+                        <li>Nolawi Woldemariam</li>
+                        <li>Paul Gia-Huy Lam</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Acknowledgments</h2>
+                <p>
+                    We acknowledge that this analysis builds upon the foundational work of the USDA's 
+                    Food Access Research Atlas while seeking to extend it with affordability considerations. 
+                    We also recognize the ongoing efforts of Seattle's emergency food providers, whose 
+                    locations we've mapped to show the relationship between market gaps and safety-net services.
+                </p>
+            </section>
+
+            <div class="cta-section">
+                <h2>Explore the Data</h2>
+                <p>Ready to dive deeper into Seattle's food access landscape?</p>
+                <div class="cta-buttons">
+                    <a href="map.html" class="btn btn-primary">View Interactive Map</a>
+                    <a href="education.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Group AB5 | GEOG 328 Final Project</p>
+            <p>University of Washington</p>
+        </div>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

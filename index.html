@@ -3,32 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seattle Food Equity Map</title>
-
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./asset/favicon.png">
-    <link rel="shortcut icon" href="./asset/favicon.png" type="image/png">
+    <title>Seattle Food Equity Map | Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-
-    <div id="console">
-        <h1>Seattle Food Equity</h1>
-        <p>Filter by Price Tier:</p>
-        <div class="session">
-            <label><input type="checkbox" id="Budget" checked> Budget ($)</label>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/favicon.png" alt="Logo" class="nav-logo">
+                <span>Seattle Food Equity</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/map.html">Interactive Map</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/education.html">Learn More</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="session">
-            <label><input type="checkbox" id="Mid-Range" checked> Mid-Range ($$)</label>
-        </div>
-        <div class="session">
-            <label><input type="checkbox" id="Premium" checked> Premium ($$$)</label>
-        </div>
-    </div>
+    </nav>
 
-    <div id="map"></div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Mapping Food Equity in Seattle</h1>
+                <p class="subtitle">A Price-Adjusted Approach to Understanding Food Access</p>
+                <p class="description">
+                    Beyond traditional food desert maps, we analyze affordability alongside proximity 
+                    to reveal the true picture of food access in Seattle neighborhoods.
+                </p>
+                <div class="cta-buttons">
+                    <a href="pages/map.html" class="btn btn-primary">Explore the Map</a>
+                    <a href="pages/education.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-    <script src="script.js"></script>
+        <section class="features">
+            <div class="container">
+                <h2>Why This Map Matters</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Price-Adjusted Analysis</h3>
+                        <p>We classify grocery stores by affordability—not just proximity—to show economic accessibility.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Location Intelligence</h3>
+                        <p>Find the nearest stores based on your location and filter by budget, mid-range, or premium options.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏘️</div>
+                        <h3>Neighborhood Context</h3>
+                        <p>See how food access correlates with income levels and emergency food provider locations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Data-Driven Insights</h3>
+                        <p>Built on USDA Food Access Research Atlas data combined with Seattle's business license database.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <h2>Start Exploring</h2>
+                <p>Discover how food access varies across Seattle neighborhoods</p>
+                <a href="pages/map.html" class="btn btn-large">View Interactive Map</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Group AB5 | GEOG 328 Final Project</p>
+            <p>University of Washington | Oscar Castillo, Chae Won Yoo, Nolawi Woldemariam, Paul Gia-Huy Lam, Evelyn Kate Antonyuk</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
 </body>
 </html>
