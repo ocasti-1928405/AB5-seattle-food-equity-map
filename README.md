@@ -8,7 +8,7 @@ This project was developed by Group AB5 (Oscar Castillo, Chae Won Yoo, Nolawi Wo
 
 ## Live Demo
 
-Visit the interactive map: [Your GitHub Pages URL Here]
+Visit the interactive map: (https://ocasti-1928405.github.io/AB5-seattle-food-equity-map/)](https://ocasti-1928405.github.io/AB5-seattle-food-equity-map/pages/map.html)
 
 ## The Problem We're Addressing
 
