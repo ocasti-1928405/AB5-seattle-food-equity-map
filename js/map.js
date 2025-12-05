@@ -30,16 +30,18 @@ function loadAllLayers() {
         id: 'lila-layer',
         type: 'fill',
         source: 'lila-data',
-        paint: {
+         paint: {
             'fill-color': [
                 'match',
-                ['to-string', ['get', 'LILATracts_1And10']], // Force the data to be text
-                '1', '#FF4D4D',   // Check for text "1" -> Red
-                'transparent'     // Everything else -> Clear
+                ['get', 'LILATracts_1And10'], 
+                1, '#FF4D4D',                 
+                'transparent'                 
             ],
             'fill-opacity': 0.5
         }
     }); 
+
+
 
     map.addSource('emergency-food', {
         type: 'geojson',
