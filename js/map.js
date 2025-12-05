@@ -39,7 +39,7 @@ function loadAllLayers() {
             ],
             'fill-opacity': 0.5
         }
-    }, 'emergency-food-symbol'); 
+    }); 
 
     map.addSource('emergency-food', {
         type: 'geojson',
