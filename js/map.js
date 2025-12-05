@@ -18,7 +18,29 @@ map.on('load', () => {
 
 map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
+
 function loadAllLayers() {
+
+    map.addSource('lila-data', {
+        type: 'geojson',
+        data: '../assets/LILA_Tracts.geojson' 
+    });
+
+    map.addLayer({
+        id: 'lila-layer',
+        type: 'fill',
+        source: 'lila-data',
+        paint: {
+            'fill-color': [
+                'match',
+                ['get', 'LILATracts_1And10'], 
+                1, '#FF4D4D',
+                'transparent'
+            ],
+            'fill-opacity': 0.5
+        }
+    }, 'emergency-food-symbol'); 
+
     map.addSource('emergency-food', {
         type: 'geojson',
         data: '../assets/emergency_food.geojson'
