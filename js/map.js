@@ -4,7 +4,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/ocasti/cmisgsuv2001a01srhaig7em9',
     center: [-122.3321, 47.6062],
-    zoom: 11
+    zoom: 12
 });
 
 let activeFilters = ['Budget', 'Mid-Range', 'Premium'];
