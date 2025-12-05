@@ -8,8 +8,7 @@ This project was developed by Group AB5 (Oscar Castillo, Chae Won Yoo, Nolawi Wo
 
 ## Live Demo
 
-Visit the interactive map: (https://ocasti-1928405.github.io/AB5-seattle-food-equity-map/)](https://ocasti-1928405.github.io/AB5-seattle-food-equity-map/pages/map.html)
-
+Visit the interactive map: (https://ocasti-1928405.github.io/AB5-seattle-food-equity-map/)
 ## The Problem We're Addressing
 
 The USDA's Food Access Research Atlas has been the gold standard for identifying food deserts in America. It defines "low access" areas using distance metrics: communities where significant portions of the population live more than 1 mile (urban) or 10 miles (rural) from the nearest supermarket. While this framework has helped direct resources to underserved areas, it operates on a flawed assumption: that all supermarkets provide equal access to affordable food.
