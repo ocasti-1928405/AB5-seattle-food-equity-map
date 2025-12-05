@@ -85,6 +85,7 @@ The application works seamlessly on desktop, tablet, and mobile devices, ensurin
     ├── stores.geojson        # Grocery store data with price tiers
     ├── emergency_food.geojson # Food banks and meal programs
     ├── seattle_hoods.geojson  # Neighborhood boundaries
+    ├── LILA_Tracts.geojson    # base layer; demographic data from the ACS, specifically income, poverty
     └── favicon.png           # Site icon
 ```
 
