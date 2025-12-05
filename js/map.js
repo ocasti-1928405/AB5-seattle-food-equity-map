@@ -33,9 +33,9 @@ function loadAllLayers() {
         paint: {
             'fill-color': [
                 'match',
-                ['get', 'LILATracts_1And10'], 
-                1, '#FF4D4D',
-                'transparent'
+                ['to-string', ['get', 'LILATracts_1And10']], // Force the data to be text
+                '1', '#FF4D4D',   // Check for text "1" -> Red
+                'transparent'     // Everything else -> Clear
             ],
             'fill-opacity': 0.5
         }
