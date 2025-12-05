@@ -2,9 +2,9 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoib2Nhc3RpIiwiYSI6ImNtaGJlcHR0bzBkbHEyam9hZjUxd
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v11', 
+    style: 'mapbox://styles/ocasti/cmisgsuv2001a01srhaig7em9', 
     center: [-122.3321, 47.6062],
-    zoom: 12
+    zoom: 10
 });
 
 let activeFilters = ['Budget', 'Mid-Range', 'Premium'];
@@ -18,7 +18,7 @@ map.on('load', () => {
     const starSvg = `
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
         <polygon points="12,2 15,9 22,9 17,13 19,20 12,16 5,20 7,13 2,9 9,9"
-                 fill="#9fc9ff" stroke="#ffffff" stroke-width="1.5"/>
+                 fill="#326dbbff" stroke="#ffffff" stroke-width="1.5"/>
       </svg>`;
 
     const img = new Image();

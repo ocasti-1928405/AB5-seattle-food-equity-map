@@ -160,9 +160,12 @@
 }
 
 .btn-locate:hover {
-    background-color: var(--secondary-color);
+    background-color: #b7a57a;
+    border-color: #d9c89e;
+    color: black;
+    font-weight: 700;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 .btn-locate:active {
