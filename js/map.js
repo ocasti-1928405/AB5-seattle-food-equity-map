@@ -138,9 +138,9 @@ function loadAllLayers() {
             'circle-color': [
                 'match',
                 ['get', 'Price_Tier'],
-                'Budget', '#789c78',
-                'Mid-Range', '#ffd54f',
-                'Premium', '#d38282',
+                'Budget', '#00b894',
+                'Mid-Range', '#b7a57a',
+                'Premium', '#d63031',
                 '#ccc'
             ]
         }

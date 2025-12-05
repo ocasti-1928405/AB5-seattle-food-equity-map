@@ -134,7 +134,7 @@
 
 .color-indicator.mid-range,
 .legend-circle.mid-range {
-    background-color: var(--midrange-color);
+    background-color: #b7a57a;
 }
 
 .color-indicator.premium,
@@ -162,6 +162,7 @@
 .btn-locate:hover {
     background-color: #b7a57a;
     border-color: #d9c89e;
+
     color: black;
     font-weight: 700;
     transform: translateY(-2px);
@@ -216,11 +217,11 @@
 }
 
 .store-item.budget {
-    border-left-color: var(--budget-color);
+    border-left-color: #00b894;
 }
 
 .store-item.mid-range {
-    border-left-color: var(--midrange-color);
+    border-left-color: #b7a57a;
 }
 
 .store-item.premium {
@@ -249,7 +250,7 @@
 }
 
 .store-tier.mid-range {
-    color: #e6b800;
+    color: #b7a57a;
 }
 
 .store-tier.premium {
